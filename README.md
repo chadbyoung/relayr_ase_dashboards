@@ -9,5 +9,5 @@ the internet please proceed with caution as you never know when Gremlins,
 Goblins, or Trolls will appear.  
   
     
-For questions please email <chad_young@dell.com>  
+For questions please email <chad_young@relayr.io>  
 
