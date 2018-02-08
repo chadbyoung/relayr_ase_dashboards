@@ -1,0 +1,89 @@
+{
+	 "dashboardConfig": {
+		"title": "smartphoneDashboard",
+		"layout": {
+			"sections": [{
+				"title": "Section 1",
+				"widgets": [
+					"temp-reading",
+					"humidity-reading"
+					]
+				},
+				{
+					"title": "Section 2",
+					"widgets": [
+						"temperature-history"
+						]
+				}
+				],
+		"widgets": [{ 
+			"id": "temp-reading",
+			"title": "Temperature reading",
+			"widgetName": "NumberReading",
+			"size": "compact",
+           		"data": [{
+				"entity": "device",
+				"target": "child",
+				"source": "measurement",
+             			"keypath": {
+					"key": "name",
+					"value": "CY XDK Dev"
+					},
+				 "options": {
+					"name": "temperature"
+					}
+			}],
+			"options": {
+				"decimalMark": "comma",
+				"fixedDecimal": 2,
+				"unit": "C"
+				}
+         		},
+			{		
+			"id": "humidity-reading",
+			"title": "Humidity reading",
+			"widgetName": "NumberReading",
+			"size": "compact",
+			"data": [{
+				"entity": "device",
+				"target": "child",
+				"source": "measurement",
+				"keypath": {
+					"key": "name",
+					"value": "CY XDK Dev"
+					},
+			"options": {
+				"name": "humidity"
+				}
+			}],
+			"options": {
+				"decimalMark": "comma",
+				"fixedDecimal": 2,
+				"unit": "%"
+				}
+			},
+			{	
+			"id": "temperature-history",
+			"title": "Temperature history",
+			"widgetName": "MultiLineChart",
+			"size": "expanded",
+			"data": [{
+				"entity": "device",
+				"target": "child",
+				"source": "measurement",
+				"keypath": {
+					"key": "name",
+					"value": "CY XDK Dev"
+					},
+				"options": {
+					"name": "temperature",
+					"type": "aggregated",
+					"timeframe": "MONTH"
+					}
+			}],
+			"options": {}
+			}
+		]
+	}
+    }
+}

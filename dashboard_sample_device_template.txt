@@ -1,0 +1,37 @@
+{
+	"dashboard":{
+		"title": "testDashboard",
+		"layout": {
+			"sections": [
+				{
+				"title": "Section 1",
+				"widgets": [
+					"temp-reading"
+					]
+				}
+			],
+		"widgets": [
+			{
+			"id": "temp-reading",
+			"title": "Temperature reading",
+		        "type": "NumberReading",
+		        "size": "compact",
+		        "data": [
+          			{
+				"target": "self",
+				"source": "measurement",
+				"options": {
+					"name": "temperature"
+					}
+          			}
+        		],
+		        "options": {
+				"decimalMark": "comma",
+				"fixedDecimal": 2,
+				"unit": "C"
+				}
+      			}
+    		]
+  		}
+	}
+}
